@@ -3,3 +3,5 @@ gunicorn
 langchain
 openai
 python-dotenv
+google-generativeai
+google-cloud-aiplatform

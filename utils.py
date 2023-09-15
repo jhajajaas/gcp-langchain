@@ -1,6 +1,6 @@
 from typing import Any
 from langchain.chains import LLMChain
-from langchain.chat_models import ChatOpenAI
+from langchain.chat_models import ChatGooglePalm
 from langchain.prompts.prompt import PromptTemplate
 
 
@@ -19,7 +19,7 @@ prompt = PromptTemplate(
 
 def create_chain() -> Any:
     chatgpt_chain = LLMChain(
-        llm=ChatOpenAI(temperature=0), 
+        llm=ChatGooglePalm(temperature=0), 
         prompt=prompt, 
         verbose=False,
     )
