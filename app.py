@@ -16,7 +16,7 @@ def chat():
     
     try:
         data = request.json
-        message = data["message"]
+        message = data["events"][0]["message"]["text"]
         chatgpt_chain = create_chain()
         prediction = chatgpt_chain.predict(human_input=message)
         
