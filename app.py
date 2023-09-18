@@ -3,6 +3,7 @@ from flask import Flask, jsonify, make_response, request
 from utils import create_chain
 import requests
 import os
+import json
 
 
 app = Flask(__name__)
@@ -23,7 +24,7 @@ def chat():
         chatgpt_chain = create_chain()
         prediction = chatgpt_chain.predict(human_input=message)
 
-        response = jsonify({
+        response = json.dumps({
             {
                 "messages":
                 [
