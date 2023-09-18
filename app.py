@@ -20,10 +20,10 @@ def chat():
         chatgpt_chain = create_chain()
         prediction = chatgpt_chain.predict(human_input=message)
         
-        return jsonify({"success": True, "data": prediction})
+        return jsonify({"type": "text", "text": prediction})
     except:
         return make_response(
             jsonify(
-                {"success": False, 
-                 "error": f"Unexpected error: failed to send the message ({request.json})"}),
+                {"type": "text", 
+                 "text": f"Unexpected error: failed to send the message ({request.json})"}),
             400)
