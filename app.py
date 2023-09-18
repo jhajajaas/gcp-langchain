@@ -22,9 +22,8 @@ def chat():
         
         return jsonify({"success": True, "data": prediction})
     except:
-        print(request.json)
         return make_response(
             jsonify(
                 {"success": False, 
-                 "error": "Unexpected error: failed to send the message"}),
+                 "error": f"Unexpected error: failed to send the message ({request.json})"}),
             400)
