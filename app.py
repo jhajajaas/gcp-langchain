@@ -40,7 +40,7 @@ def chat():
 
         resp = requests.post("https://api.line.me/v2/bot/message/reply", data=response, headers=headers)
 
-        return resp
+        return resp.text
         
     except Exception as e:
         return make_response(f"There is an error processing request: {e}")
