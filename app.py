@@ -22,6 +22,7 @@ def chat():
         
         return jsonify({"success": True, "data": prediction})
     except:
+        print(request.json)
         return make_response(
             jsonify(
                 {"success": False, 
