@@ -24,7 +24,7 @@ def chat():
         chatgpt_chain = create_chain()
         prediction = chatgpt_chain.predict(human_input=message)
 
-        response = json.dumps({
+        response = json.dumps(
             {
                 "messages":
                 [
@@ -34,7 +34,6 @@ def chat():
                     ],
                 "replyToken": replyToken 
                 }
-        }
         )
 
         headers = {
