@@ -42,6 +42,8 @@ def chat():
         }
 
         requests.post("https://api.line.me/v2/bot/message/reply", json=response, headers=headers)
+
+        return response
         
     except Exception as e:
         return make_response(f"There is an error processing request: {e}")
