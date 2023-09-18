@@ -35,7 +35,7 @@ def chat():
         )
 
         headers = {
-            "Authorization": "Bearer NOoNbXljlg6p2+kp3qf37iEzCokeZNxIa2X2A2MGZS2n0gjvnClnzJsqj0YhiYra8IepUAd7oGQeotFmqErxkTzisHTg44xlTAn8qbZOXaMKs1bxkCAky2uUnge5gOLnK6GI1/LHqsS0cxq0M3BecwdB04t89/1O/w1cDnyilFU="
+            "Authorization": "Bearer {NOoNbXljlg6p2+kp3qf37iEzCokeZNxIa2X2A2MGZS2n0gjvnClnzJsqj0YhiYra8IepUAd7oGQeotFmqErxkTzisHTg44xlTAn8qbZOXaMKs1bxkCAky2uUnge5gOLnK6GI1/LHqsS0cxq0M3BecwdB04t89/1O/w1cDnyilFU=}"
         }
 
         request.post("https://api.line.me/v2/bot/message/reply", data=response, headers=headers)
