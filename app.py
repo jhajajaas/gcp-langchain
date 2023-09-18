@@ -43,6 +43,5 @@ def chat():
 
         requests.post("https://api.line.me/v2/bot/message/reply", json=response, headers=headers)
         
-    except:
-        return make_response(
-            jsonify({"messages": [{"type": "text", "text": f"Unexpected error: failed to send the message ({request.json})"}], "replyToken": data["events"][0]["replyToken"]}))
+    except Exception as e:
+        return make_response(f"There is an error processing request: {e.message}")
